@@ -1,0 +1,62 @@
+@(Persons : List[String],Locations:List[String],Organizations:List[String],Input :String)
+
+
+@main(title = "AVCE Text Analyzer") {
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="span4">
+
+<div class="box">
+<p class="headingPara">Entities</p>
+<ul>
+	<li id="m1" class="header">Person</li>
+	<li>
+	<div id="l1cover">
+		<ul>
+			@for(person <- Persons){
+ 			   		<li> @person </li>
+				}		
+		</ul>
+	</div>
+	</li>
+	<li id="m2" class="header">Locations</li>
+	<li>
+	<div id="l2cover">
+		<ul>
+			@for(location <- Locations){
+ 			   		<li> @location </li>
+				}		
+		</ul>
+	</div>
+	</li>
+</ul>
+</div>
+</div>
+
+<div class="span8">
+	
+	
+		<p class="inputdisplay">
+			
+			@Input
+		</p>
+		<a class="btn primary" href="@routes.Application.index">Try another text</a><br/><br/>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

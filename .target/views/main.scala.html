@@ -1,0 +1,75 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">  
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/logo.png")">
+        <link rel="shortcut icon1" type="image/gif" href="@routes.Assets.at("images/expandsmall.gif")">
+        <link rel="shortcut icon2" type="image/gif" href="@routes.Assets.at("images/collapsesmall.gif")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+        
+        <style>
+			
+			.header{
+					background-image:url(@routes.Assets.at("images/expandsmall.gif"));
+					background-repeat: no-repeat;
+					background-position: 0px 2px; 
+    				padding-left: 14px;
+    				font-size: 12px;
+    				color:black;
+    				font-weight: bold;
+    				font-family: Tahoma;
+    				
+			}
+
+			.imagechange{
+					background-image:url(@routes.Assets.at("images/collapsesmall.gif"));
+					background-repeat: no-repeat;
+					background-position: 0px 2px; 
+    				padding-left: 14px;
+			}
+		</style>
+        <script>
+			$(function(){
+							$("#l1cover").toggle();
+							$("#l2cover").toggle();
+		
+							$("#m1").click(function () {
+							$("#l1cover").toggle(500);
+							$("#m1").toggleClass("imagechange");
+			});
+			$("#m2").click(function () {
+						$("#l2cover").toggle(500);
+						$("#m2").toggleClass("imagechange");
+						
+			});
+		
+		
+});
+</script>
+        
+    </head>
+    <body>
+    
+   
+    
+    <div class="topbar">
+            <div class="fill">
+                <div class="container">
+                    <div class="brand"><img src="@routes.Assets.at("images/logo.png")" ></img>AVCE Text Analyzer Engine</div>
+                </div>
+            </div>
+     </div>
+     
+     <div class="container">    
+     	<br/><br/><br/>
+     	<div class="row">
+        @content
+        </div>
+     </div>   
+    </body>
+</html>

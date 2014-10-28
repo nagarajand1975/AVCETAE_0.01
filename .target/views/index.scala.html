@@ -1,0 +1,23 @@
+@(inputForm: Form[models.InputForm])
+
+@import helper._
+
+@main(title = "AVCE Text Analyzer") {
+    <br/><br/><br/><br/><br/><br/>
+    <p>
+    <h2>Input text to be analyzed </h2>
+    
+    @form(action = routes.Application.submit, args = 'id -> "inputform") {
+        
+       <fieldset>
+        @textarea(
+            field = inputForm("userinput"),
+            args = '_label -> "", 'placeholder -> ""
+        )
+        
+        <input type="submit" class="btn primary">
+        </fieldset>
+        
+    }
+    </p>
+}
