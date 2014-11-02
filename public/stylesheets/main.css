@@ -126,12 +126,11 @@ ul {
    
 }
 			
-#l1cover{
-					font-size: 14px;
-    				color:red;
-    				font-weight: bold;
-    				font-family: Arial;
-    				
+ul li{
+    				font-size: 12px;
+    				color:black;
+    				font-family: verdana;
+   
 }
 
 

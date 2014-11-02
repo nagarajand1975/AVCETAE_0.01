@@ -1,10 +1,11 @@
-@(Persons : List[String],Locations:List[String],Organizations:List[String],Input :String)
-
+@(DataList : List[com.avce.tae.data.NameData],Input:String)
 
 @main(title = "AVCE Text Analyzer") {
 
 
-<br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/>
+
+<br/><br/><br/><br/><br/>
 <div class="span4">
 
 <div class="box">
@@ -14,36 +15,100 @@
 	<li>
 	<div id="l1cover">
 		<ul>
-			@for(person <- Persons){
- 			   		<li> @person </li>
+			@for(i<-0 to DataList.length-1){
+				@for(person <- DataList.get(i).personList){
+				   <li> @person </li>
 				}		
+			}		
 		</ul>
 	</div>
 	</li>
-	<li id="m2" class="header">Locations</li>
+	<li id="m2" class="header">Organization</li>
 	<li>
 	<div id="l2cover">
 		<ul>
-			@for(location <- Locations){
- 			   		<li> @location </li>
+			@for(i<-0 to DataList.length-1){
+				@for(organisation <- DataList.get(i).organisationList){
+				   <li> @organisation </li>
 				}		
+			}		
 		</ul>
 	</div>
 	</li>
+	<li id="m3" class="header">Location</li>
+	<li>
+	<div id="l3cover">
+		<ul>
+			@for(i<-0 to DataList.length-1){
+				@for(location <- DataList.get(i).locationList){
+				   <li> @location </li>
+				}		
+			}			
+		</ul>
+	</div>
+	</li>
+	<li id="m4" class="header">Date</li>
+	<li>
+	<div id="l4cover">
+		<ul>
+			@for(i<-0 to DataList.length-1){
+				@for(date <- DataList.get(i).dateList){
+				   <li> @date </li>
+				}		
+			}			
+		</ul>
+	</div>
+	</li>
+	
+	<li id="m5" class="header">Time</li>
+	<li>
+	<div id="l5cover">
+		<ul>
+			@for(i<-0 to DataList.length-1){
+				@for(time <- DataList.get(i).timeList){
+				   <li> @time </li>
+				}		
+			}			
+		</ul>
+	</div>
+	</li>
+	
+	<li id="m6" class="header">Money</li>
+	<li>
+	<div id="l6cover">
+		<ul>
+			@for(i<-0 to DataList.length-1){
+				@for(money <- DataList.get(i).moneyList){
+				   <li> @money </li>
+				}		
+			}			
+		</ul>
+	</div>
+	</li>
+	
+	<li id="m7" class="header">Percent</li>
+	<li>
+	<div id="l7cover">
+		<ul>
+			@for(i<-0 to DataList.length-1){
+				@for(percent <- DataList.get(i).percentList){
+				   <li> @percent </li>
+				}		
+			}			
+		</ul>
+	</div>
+	</li>
+	
 </ul>
 </div>
 </div>
 
 <div class="span8">
-	
-	
 		<p class="inputdisplay">
 			
 			@Input
 		</p>
 		<a class="btn primary" href="@routes.Application.index">Try another text</a><br/><br/>
-	
-	
 </div>
 
 

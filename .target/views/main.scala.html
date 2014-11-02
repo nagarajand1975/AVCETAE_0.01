@@ -11,6 +11,7 @@
         <link rel="shortcut icon1" type="image/gif" href="@routes.Assets.at("images/expandsmall.gif")">
         <link rel="shortcut icon2" type="image/gif" href="@routes.Assets.at("images/collapsesmall.gif")">
         <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/d3.min.js")" type="text/javascript"></script>
         
         <style>
 			
@@ -37,18 +38,42 @@
 			$(function(){
 							$("#l1cover").toggle();
 							$("#l2cover").toggle();
-		
+							$("#l3cover").toggle();
+							$("#l4cover").toggle();
+							$("#l5cover").toggle();
+							$("#l6cover").toggle();
+							$("#l7cover").toggle();
+							
 							$("#m1").click(function () {
-							$("#l1cover").toggle(500);
-							$("#m1").toggleClass("imagechange");
-			});
-			$("#m2").click(function () {
-						$("#l2cover").toggle(500);
-						$("#m2").toggleClass("imagechange");
-						
-			});
+								$("#l1cover").toggle(500);
+								$("#m1").toggleClass("imagechange");
+							});
+							$("#m2").click(function () {
+								$("#l2cover").toggle(500);
+								$("#m2").toggleClass("imagechange");
+							});
+							$("#m3").click(function () {
+								$("#l3cover").toggle(500);
+								$("#m3").toggleClass("imagechange");
+							});
 		
-		
+							$("#m4").click(function () {
+								$("#l4cover").toggle(500);
+								$("#m4").toggleClass("imagechange");
+							});
+							$("#m5").click(function () {
+								$("#l5cover").toggle(500);
+								$("#m5").toggleClass("imagechange");
+							});
+							$("#m6").click(function () {
+								$("#l6cover").toggle(500);
+								$("#m6").toggleClass("imagechange");
+							});
+							$("#m7").click(function () {
+								$("#l7cover").toggle(500);
+								$("#m7").toggleClass("imagechange");
+							});
+					
 });
 </script>
         
